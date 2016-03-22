@@ -1,0 +1,24 @@
+ .title {
+ 	color: #fff;
+ 	font-size: 3em;
+ 	padding: 20px;
+ }
+
+.div_superman,
+.div_batman {
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	height: 800px;
+	margin: 0;
+    padding: 0;
+    width: 50%;
+}
+
+.div_superman {
+	background: url("<%= asset_path 'superman' %>") no-repeat center top transparent;
+}
+
+.div_batman {
+	background: url("<%= asset_path 'batman' %>") no-repeat right top transparent;
+}

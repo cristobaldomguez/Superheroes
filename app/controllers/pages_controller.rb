@@ -6,4 +6,7 @@ class PagesController < ApplicationController
   def superman
     @cl = 'superman'
   end
+
+  def batman_vs_superman
+  end
 end
