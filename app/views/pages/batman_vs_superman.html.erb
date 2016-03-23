@@ -1,6 +1,27 @@
-<a href="<%= pages_superman_path %>">
-	<div class="div_superman"></div>
-</a>
-<a href="<%= pages_batman_path %>">
-	<div class="div_batman"></div>
-</a> 
+<div class="vote">
+	<a href="<%= pages_superman_path %>">
+		<div class="div_superman"></div>
+	</a>
+	
+	<% if notice %>
+	<%= notice %>
+	<% elsif alert %>
+	<%= alert %>
+	<% end %>
+
+	<%= form_tag pages_polling_path, method: 'get', class: 'form' do %>
+	<div class="form-group">
+		<%= label_tag :email, 'E-mail' %>
+		<%= text_field_tag :email %>
+	</div>
+	<div class="form-group">
+		<%= submit_tag "Votar", :name => "Superman" %>
+	</div>
+	<% end %>
+</div>
+
+<div class="vote">
+	<a href="<%= pages_batman_path %>">
+		<div class="div_batman"></div>
+	</a>
+</div>
